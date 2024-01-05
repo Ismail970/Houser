@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom"
-import rentCategoryImage from "../assets/jpg/rentCategoryImage.jpg"
-import sellCategoryImage from "../assets/jpg/sellCategoryImage.jpg"
+import { Link } from 'react-router-dom'
+import Slider from '../components/Slider'
+import rentCategoryImage from '../assets/jpg/rentCategoryImage.jpg'
+import sellCategoryImage from '../assets/jpg/sellCategoryImage.jpg'
 
-function Explore () {
+function Explore() {
   return (
     <div className='explore'>
       <header>
@@ -10,25 +11,25 @@ function Explore () {
       </header>
 
       <main>
-        {/* slider */}
+        <Slider />
 
-        <p className="exploreCategoryHeading">Categories</p>
+        <p className='exploreCategoryHeading'>Categories</p>
         <div className='exploreCategories'>
-          <Link to="/category/rent">
+          <Link to='/category/rent'>
             <img
               src={rentCategoryImage}
-              alt="rent"
+              alt='rent'
               className='exploreCategoryImg'
             />
             <p className='exploreCategoryName'>Places for rent</p>
           </Link>
-          <Link to="/category/sale">
+          <Link to='/category/sale'>
             <img
               src={sellCategoryImage}
-              alt="sell"
+              alt='sell'
               className='exploreCategoryImg'
             />
-            <p className='exploreCategoryName'>Places for sell</p>
+            <p className='exploreCategoryName'>Places for sale</p>
           </Link>
         </div>
       </main>
